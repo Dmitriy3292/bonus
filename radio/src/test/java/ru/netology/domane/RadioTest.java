@@ -73,7 +73,7 @@ class RadioTest {
     @Test
     public void shouldMinStation() {
         Radio radio = new Radio();
-        radio.setMaxStation(10);
+        radio.setMaxStation(9);
         radio.setMinStation(0);
         radio.setCurrentStation(0);
         assertEquals(0, radio.getCurrentStation());
@@ -124,8 +124,8 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setMaxStation(9);
         radio.setMinStation(0);
-        radio.setCurrentStation(10);
-        assertEquals(0, radio.getCurrentStation());
+        radio.setCurrentStation(9);
+        assertEquals(9, radio.getCurrentStation());
     }
 
     @Test
@@ -140,7 +140,7 @@ class RadioTest {
     @Test
     public void shouldCurrentStationMin() {
         Radio radio = new Radio();
-        radio.setMaxStation(10);
+        radio.setMaxStation(9);
         radio.setMinStation(0);
         radio.setCurrentStation(-1);
         assertEquals(0, radio.getCurrentStation());
